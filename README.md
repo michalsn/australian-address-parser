@@ -1,8 +1,8 @@
-# Australian Address Parser
+# Australian Address Parser [![](https://github.com/michalsn/australian-address-parser/workflows/PHP%20Tests/badge.svg)](https://github.com/michalsn/australian-address-parser/actions?query=workflow%3A%22PHP+Tests%22)
 
 Parse the address string to the array.
 
-## Installation via composer
+## Installation
 
 	> composer require michalsn/australian-address-parser
 
