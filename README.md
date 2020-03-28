@@ -24,3 +24,7 @@ $result = $parser->parse('1/55 Rutherford St, Stafford Heights Queensland');
 	'streetName' => 'Rutherford',
 ]
 ```
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
