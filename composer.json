@@ -1,0 +1,34 @@
+{
+  "name": "michalsn/australian-address-parser",
+  "description": "Australian address parser.",
+  "keywords": [
+      "australia", "address", "parser"
+  ],
+  "homepage": "https://github.com/michalsn/australian-address-parser",
+  "authors": [
+    {
+      "name": "michalsn",
+      "homepage": "https://github.com/michalsn",
+      "role": "Developer"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "php" : ">=7.2"
+  },
+  "minimum-stability": "dev",
+  "require-dev": {
+    "phpunit/phpunit" : "^8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Michalsn\\AustralianAddressParser\\": "src"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit tests",
+    "post-update-cmd": [
+      "@composer dump-autoload"
+    ]
+  }
+}
