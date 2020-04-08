@@ -176,6 +176,9 @@ class Parser
 		// prepare address
 		$address = ucwords(strtolower(str_replace(',', ' ', $address)));
 
+		// exclude Australia from string
+		$address = $this->excludeAustralia($address);
+
 		// handle special suburbs
 		$small   = array_map('ucwords', array_map('strtolower', $this->suburbSpecial));
 		$address = str_replace($small, $this->suburbSpecial, $address);
@@ -387,6 +390,36 @@ class Parser
 		}
 
 		$this->data['streetName'] = $address;
+
+		return $address;
+	}
+
+	/**
+	 * Exclude Australia from string if needed
+	 *
+	 * @param string $address Address
+	 *
+	 * @return string
+	 */
+	protected function excludeAustralia(string $address): string
+	{
+		// count word occurence
+		$count = substr_count($address, ' Australia');
+
+		if ($count === 1)
+		{
+			// make sure it's not state related word
+			if (strpos($address, 'South Australia') === false && strpos($address, 'Western Australia') === false)
+			{
+				$address = str_replace(' Australia', '', $address);
+			}
+		}
+
+		if ($count > 1)
+		{
+			// replace only last occurence
+			$address = $this->replaceLast(' Australia', '', $address);
+		}
 
 		return $address;
 	}
