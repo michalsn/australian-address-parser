@@ -246,7 +246,7 @@ class Parser
 		}
 		else
 		{
-			$suburbs = array_merge($this->suburbs['QLD'], $this->suburbs['NSW'], $this->suburbs['NT'], $this->suburbs['SA'], $this->suburbs['TAS'], $this->suburbs['VIC'], $this->suburbs['WA'], $this->suburb['ACT']);
+			$suburbs = array_merge($this->suburbs['QLD'], $this->suburbs['NSW'], $this->suburbs['NT'], $this->suburbs['SA'], $this->suburbs['TAS'], $this->suburbs['VIC'], $this->suburbs['WA'], $this->suburbs['ACT']);
 		}
 
 		for ($i = 0; $i < count($suburbs); $i++)
